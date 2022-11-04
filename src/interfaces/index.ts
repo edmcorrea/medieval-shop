@@ -4,7 +4,10 @@ export interface IProducts {
   amount: string;
 }
 
-// export interface Login {
-//   email: string,
-//   password: string,
-// }
+export interface IUser {
+  id?: number; 
+  username: string,
+  classe: string,
+  level: number,
+  password?: string,
+}

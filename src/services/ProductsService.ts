@@ -10,4 +10,10 @@ export default class ProductsService {
     // console.log('CONSOLELOG', createdProducts);
     return createdProducts;
   };
+
+  getAllProducts = async () => {
+    const allProducts = await this.productsModel.getAll();
+    // console.log('CONSOLELOG', createdProducts);
+    return allProducts;
+  };
 }

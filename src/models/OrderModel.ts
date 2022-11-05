@@ -12,7 +12,10 @@ export default class OrderModel {
   getAllOrders = async (): Promise<IOrders[]> => {
     const [row] = await this.connection
       .execute<IOrders[] & ResultSetHeader>(
-      'SELECT * FROM Trybesmith.Orders;',
+      `SELECT ord.id, ord.userId, product.id AS productsIds
+      FROM Trybesmith.Orders AS ord
+      INNER JOIN Trybesmith.Products AS product
+      ON product.orderId = ord.id;`,
     );
     return row as IOrders[];
   };

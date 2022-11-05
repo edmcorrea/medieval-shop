@@ -1,12 +1,12 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import { IUser } from '../interfaces';
+import { ILogin, IUser } from '../interfaces';
 
 dotenv.config();
 
 const TOKEN_SECRET_KEY = process.env.JWT_SECRET || 'paocomqueijo';
 
-export default function generateToken(payload: IUser) {
+export default function generateToken(payload: IUser | ILogin) {
   // const jwtConfig = {
   //   expiresIn: '7d',
   //   algorithm: 'HS256',

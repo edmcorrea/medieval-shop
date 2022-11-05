@@ -8,12 +8,14 @@ export default class LoginModel {
     this.connection = connection;
   }
 
-  async login(login:ILogin):Promise<IUser[]> {
+  async login(login:ILogin): Promise<IUser[]> {
     const { username, password } = login;
     const [row] = await this.connection.execute<IUser[] & ResultSetHeader>(
       'SELECT * FROM Trybesmith.Users WHERE username=? AND password=?',
       [username, password],
     );
+    console.log(row);
+    
     return row;
   }
 }

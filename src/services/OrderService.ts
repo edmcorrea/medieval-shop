@@ -10,7 +10,7 @@ export default class OrderService {
     // const getAllReduce = getAll.reduce((acc, curr) => {
     //   const accFilter = acc.filter(({ id }) => id === curr.id);
     //   const newProductsId = accFilter.productsIds.push(curr.productsIds) || [curr.productsIds];
-    //   return acc.push({id: curr.id, userId: curr.userId, productsIds: newProductsId}); 
+    //   return acc.push({ id: curr.id, userId: curr.userId, productsIds: newProductsId }); 
     // }, []);
     return getAll;
   }

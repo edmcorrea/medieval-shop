@@ -7,18 +7,14 @@ dotenv.config();
 const TOKEN_SECRET_KEY = process.env.JWT_SECRET || 'paocomqueijo';
 
 export default function generateToken(payload: IUser | ILogin) {
-  // const jwtConfig = {
-  //   expiresIn: '7d',
-  //   algorithm: 'HS256',
-  // };
-  // console.log('PAYLOAD', payload);
+  const jwtConfig = {
+    expiresIn: '7d',
+    algorithm: 'HS256',
+  };
   const token = jwt.sign(
     payload,
     TOKEN_SECRET_KEY,
-    {
-      expiresIn: '7d',
-      algorithm: 'HS256',
-    },
+    jwtConfig as object,
   );
   return token;
 }

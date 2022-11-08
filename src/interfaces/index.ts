@@ -14,7 +14,7 @@ export interface IUser {
 
 export interface IOrders {
   id?: number;
-  userId: string;
+  userId: number;
   productsId?: number;
   productsIds?: number[];
 }
@@ -22,4 +22,10 @@ export interface IOrders {
 export interface ILogin {
   username: string,
   password?: string,
+}
+
+export interface IToken {
+  id?: number,
+  type?: string,
+  message?: string,
 }

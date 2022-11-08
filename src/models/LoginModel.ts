@@ -14,7 +14,6 @@ export default class LoginModel {
       'SELECT * FROM Trybesmith.Users WHERE username=? AND password=?',
       [username, password],
     );
-    console.log(row);
     
     return row;
   }

@@ -20,4 +20,12 @@ export default class OrderModel {
     );
     return row as IOrders[];
   };
+
+  postOrders = async (userId: number) => {
+    const [{ insertId }] = await this.connection.execute<ResultSetHeader>(
+      'INSERT INTO Trybesmith.Orders (userId) VALUE (?)',
+      [userId],
+    );
+    return insertId as number;
+  };
 }

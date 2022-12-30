@@ -1,4 +1,4 @@
-# API-Story in Node + TypeScript
+# Medieval Story in Node + TypeScript
 <!-- Improved compatibility of back to top link: See: https://github.com/edmcorrea/project-app-de-receitas--/blob/main/README.md -->
 <a name="readme-top"></a>
 
